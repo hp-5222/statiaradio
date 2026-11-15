@@ -5,3 +5,14 @@ h1 {
 #youtube-player {
   margin-left:66%;
 }
+
+button {
+  font-family: 'Quicksand';
+  font-size: 120%;
+  background-color: rgb(41, 41, 41);
+  border-radius: 25%;
+  color:white;
+  border:none;
+  padding:0.75%;
+  margin-right:1%;
+}
