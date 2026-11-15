@@ -56,4 +56,7 @@ setInterval(() => {
   if (Math.abs(currentTime-currentExpectedTimestamp) > 2000) {
     player.seekTo(currentExpectedTimestamp/1000, true);
   }
-}, 2000);
+  if (player.getPlaybackRate() !== 1) {
+    player.setPlaybackRate(1);
+  }
+}, 500);
