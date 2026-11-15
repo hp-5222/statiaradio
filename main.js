@@ -51,6 +51,12 @@ const stations = {
       { title: "White Wedding", artist: "Billy Idol", length: 253000, link: "o5oTrvdNoP4", weight: 6 }, // NW
     ]  
   },
+    S1CF: {
+    frequency: 101.2,
+    songs: [
+      { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231,000, link: "3nqJOc24xjM", weight: 1 },
+    ]  
+  },
 };
 
 const mb32=s=>{let a=0;for(let c of s)a=Math.imul(31,a)+c.charCodeAt(0)|0;return t=>(a=a+1831565813|0,t=Math.imul(a^a>>>15,1|a),t=t+Math.imul(t^t>>>7,61|t)^t,(t^t>>>14)>>>0)/2**32};
