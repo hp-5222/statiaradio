@@ -49,7 +49,7 @@ setInterval(() => {
     initialTimestamp = state.timestamp;
   }
   const currentTime = player.getCurrentTime()*1000;
-  if (Math.abs(currentTime-currentExpectedTime) > 2000) {
-    player.seekTo(currentExpectedTime, true);
+  if (Math.abs(currentTime-currentExpectedTimestamp) > 2000) {
+    player.seekTo(currentExpectedTimestamp, true);
   }
 }, 2000);
