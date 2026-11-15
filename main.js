@@ -60,6 +60,7 @@ const stations = {
     songs: [
       { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231000, link: "3nqJOc24xjM", weight: 1 },
       { title: "Ojuelegba", artist: "Wizkid ft Drake & Skepta", length: 271000, link: "0xMKf5BiodM", weight: 1},
+      { title: "Van Cleef Pt 3", artist: "Manlie Donn", length: 226000, link: "T0hN9NqgIWk", weight: 1},
     ]  
   },
 };
