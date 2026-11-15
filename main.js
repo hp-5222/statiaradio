@@ -19,7 +19,7 @@ function selectWeightedSong(songs, random) {
     for (const song of songs) {
         totalWeight += song.weight;
     }
-    const randomNum = random * totalWeight;
+    const randomNum = random() * totalWeight;
     let currentWeight = 0;
 
     for (const song of songs) {
