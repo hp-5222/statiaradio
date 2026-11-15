@@ -28,7 +28,15 @@ const stations = {
       { title: "positions", artist: "Ariana Grande", length: 178000, link: "tcYodQoapMg", weight: 5 },
       { title: "we can't be friends (wait for your love)", artist: "Ariana Grande", length: 177000, link: "UdRAXWNvjzE", weight: 7 },
       { title: "drivers license", artist: "Olivia Rodrigo", length: 242000, link: "2PRvp-mP_q0", weight: 10 },
-      { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 10, special:"holiday"},
+      
+      { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
+      { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 347000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
+      { title: "Snowman", artist: "Sia", length: 172000, link: "gset79KMmt0", weight: 10, special:"holiday"},
+      { title: "Santa Tell Me", artist: "Ariana Grande", length: 339000, link: "nlR0MkrRklg", weight: 15, special:"holiday"},
+      { title: "Last Christmas", artist: "Wham!", length: 278000, link: "E8gmARGvPlI", weight: 10, special:"holiday"},
+      { title: "Underneath the Tree", artist: "Kelly Clarkson", length: 230000, link: "YfF10ow4YEo", weight: 10, special:"holiday"},
+      { title: "Rockin' Around The Christmas Tree", artist: "Brenda Lee", length: 128000, link: "TFsZy9t-qDc", weight: 7, special:"holiday"},
+      { title: "take me home (4 christmas)", artist: "Olivia Rodrigo", length: 177000, link: "nE_znSndRuQ", weight: 4, special:"holiday"},
     ]  
   },
   S1FW: {
@@ -105,6 +113,7 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
             recencyMultiplier = Math.max(0.05,timeSinceLastPlay / repeatCooldown);
         }
     }
+    console.log(recencyMultiplier);
 
     let holidayCoefficient = song?.special === "holiday" ? 0 : 1;
     const now = new Date(simulatedTime);
@@ -115,9 +124,8 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
     const seasonStart = new Date(now.getFullYear(), 10, 1);
     const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
     
-    // holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart)));
-    holidayCoefficient = 10000
-
+    holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart))) * 10;
+  
     return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient : baseWeight * recencyMultiplier
 }
 
