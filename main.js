@@ -166,6 +166,17 @@ function getListFromBlock(station, block) {
   const applicableWindow = 21480000; // 5:58 hours
   const blockPlaylist = [];
   const random = mb32(seed)
+  console.log("DEBUG", {
+      frequency: station.frequency,
+      block: block,
+      seed: seed,
+      songs: station.songs.map(s => ({
+          title: s.title,
+          length: s.length,
+          weight: s.weight,
+          special: s.special
+      }))
+  });
   let simulatedTime = block; // The time elapsed as we reconstruct the sequence beginning at block in Unix milliseconds
 
   while (simulatedTime < (block+applicableWindow)) {
