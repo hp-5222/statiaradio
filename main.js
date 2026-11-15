@@ -28,6 +28,7 @@ const stations = {
       { title: "positions", artist: "Ariana Grande", length: 178000, link: "tcYodQoapMg", weight: 5 },
       { title: "we can't be friends (wait for your love)", artist: "Ariana Grande", length: 177000, link: "UdRAXWNvjzE", weight: 7 },
       { title: "drivers license", artist: "Olivia Rodrigo", length: 242000, link: "2PRvp-mP_q0", weight: 10 },
+      { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 10, special:"holiday"},
     ]  
   },
   S1FW: {
@@ -88,6 +89,39 @@ function selectWeightedSong(songs, random) {
     }
 }
 
+
+function calculateWeight(song, simulatedTime, blockPlaylist) {
+    const baseWeight = song.weight;
+    const repeatCooldown = 3600000; // 1 hour
+    const previousPlays = blockPlaylist.filter(played => played.title === song.title);
+    const lastPlayed = previousPlays.length > 0 ? previousPlays[previousPlays.length - 1] : null;
+
+    let recencyMultiplier = 1;
+
+    if (lastPlayed) {
+        const timeSinceLastPlay = simulatedTime - lastPlayed.startTime;
+
+        if (timeSinceLastPlay < repeatCooldown) {
+            recencyMultiplier = Math.max(0.05,timeSinceLastPlay / repeatCooldown);
+        }
+    }
+
+    let holidayCoefficient = song?.special === "holiday" ? 0 : 1;
+    const now = new Date(simulatedTime);
+    let christmas = new Date(now.getFullYear(), 11, 25);
+    if (now > christmas) {
+      christmas.setFullYear(christmas.getFullYear() + 1);
+    }
+    const seasonStart = new Date(now.getFullYear(), 10, 1);
+    const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
+    
+    // holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart)));
+    holidayCoefficient = 1
+
+    return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient : baseWeight * recencyMultiplier
+}
+
+
 function getListFromBlock(station, block) {
   // Block: The beginning of the 6 hour block in Unix milliseconds seconds
   const seed = `${station.frequency}-${block}`
@@ -100,7 +134,8 @@ function getListFromBlock(station, block) {
     const remaining = block+applicableWindow-simulatedTime; // How much more time playtime is left in the block
     const eligibleSongs = station.songs.filter(song => song.length <= remaining);
     if (eligibleSongs.length === 0) break;
-    const song = selectWeightedSong(eligibleSongs, random);
+    const weightedSongs = eligibleSongs.map(song => ({...song, weight: calculateWeight(song, simulatedTime, blockPlaylist)}));
+    const song = selectWeightedSong(weightedSongs, random);
     blockPlaylist.push({...song, startTime: simulatedTime, endTime: simulatedTime+song.length});
     simulatedTime += song.length;
   }
