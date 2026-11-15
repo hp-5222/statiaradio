@@ -113,8 +113,7 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
             recencyMultiplier = Math.max(0.05,timeSinceLastPlay / repeatCooldown);
         }
     }
-    console.log(recencyMultiplier);
-
+  
     let holidayCoefficient = song?.special === "holiday" ? 0 : 1;
     const now = new Date(simulatedTime);
     let christmas = new Date(now.getFullYear(), 11, 25);
@@ -124,8 +123,7 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
     const seasonStart = new Date(christmas.getFullYear(), 10, 10);
     const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
     
-    // holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart))) * 10;
-    holidayCoefficient = 10000;
+    holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart))) * 10;
   
     return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient : baseWeight * recencyMultiplier
 }
@@ -148,7 +146,17 @@ function getListFromBlock(station, block) {
     blockPlaylist.push({...song, startTime: simulatedTime, endTime: simulatedTime+song.length});
     simulatedTime += song.length;
   }
-  console.log(blockPlaylist);
+  const tally = Object.values(blockPlaylist.reduce((acc, song) => {
+    const key = `${song.title}-${song.artist}`;
+    if (!acc[key]) {
+      acc[key] = { ...song, plays: 0 };
+    }
+    acc[key].plays++;
+    return acc;
+    }, {})
+  );
+  
+  console.log(tally);
   return blockPlaylist;
 }
 
