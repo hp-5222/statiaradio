@@ -31,6 +31,11 @@ const stations = {
       { title: "august", artist: "Taylor Swift", length: 264000, link: "nn_0zPAfyo8", weight: 10 },
       { title: "we fell in love in october", artist: "girl in red", length: 187000, link: "iggmiF7DNoM", weight: 7 },
       { title: "Midnight Sun", artist: "Zara Larsson", length: 187000, link: "uvY8fdgezLQ", weight: 25 },
+      { title: "drop dead", artist: "Olivia Rodrigo", length: 224000, link: "t_OyQhiqXgA", weight: 35 },
+      { title: "the cure", artist: "Olivia Rodrigo", length: 314000, link: "B402rKl4bUg", weight: 7 },
+      { title: "maggots for brains", artist: "Olivia Rodrigo", length: 240000, link: "lwiQSOaI_XE", weight: 15 },
+      { title: "u + me = <3", artist: "Olivia Rodrigo", length: 247000, link: "p-YnaSsGsPU", weight: 15 },
+
       
       { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
       { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 347000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
@@ -157,15 +162,8 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
     holidayCoefficient = Math.max(0,Math.min(1,(simulatedTime - seasonStart) / (christmas - seasonStart))) * 15;
 
     let hour = new Date(simulatedTime).getUTCHours();
-    let isNight = hour >= 21 || hour < 6;
-    let ACmultiplier = song?.special === "AC" && (isNight) ? 0 : 1;  
-    console.log("DEBUG", {
-      simulatedTime,
-      hour,
-      isNight,
-      song: song.title,
-      multiplier: ACmultiplier
-    });
+    let isNight = hour >= 1 || hour < 10;
+    let ACmultiplier = song?.special === "AC" && (isNight) ? 0 : 1;
   
     return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient * ACmultiplier : baseWeight * recencyMultiplier * ACmultiplier
 }
