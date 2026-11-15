@@ -50,6 +50,6 @@ setInterval(() => {
   }
   const currentTime = player.getCurrentTime()*1000;
   if (Math.abs(currentTime-currentExpectedTimestamp) > 2000) {
-    player.seekTo(currentExpectedTimestamp, true);
+    player.seekTo(currentExpectedTimestamp/1000, true);
   }
 }, 2000);
