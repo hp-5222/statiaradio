@@ -64,3 +64,5 @@ function getCurrentState(station, time = Date.now()) {
     timestamp: time - currentSong.startTime
   }
 }
+
+console.log(getCurrentState(stations.S1OT));
