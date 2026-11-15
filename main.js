@@ -65,6 +65,28 @@ const stations = {
       { title: "Tainted Love", artist: "Soft Cell", length: 241000, link: "HnLeHfNiEn0", weight: 6 }, // NW
       { title: "Rebel Yell", artist: "Billy Idol", length: 289000, link: "seHlHzYpWBU", weight: 7 }, // NW
       { title: "White Wedding", artist: "Billy Idol", length: 253000, link: "o5oTrvdNoP4", weight: 6 }, // NW
+      { title: "All I Want for Christmas Is You", artist: "Mariah Carey", length: 242000, link: "fRyhqobl0sk", weight: 8, special:”holiday” }, // CM
+
+      { title: "Underneath the Tree", artist: "Kelly Clarkson", length: 230000, link: "thqw3zeTMII", weight: 8, special:”holiday” }, // CM
+      { title: "(There’s No Place Like) Home for the Holidays", artist: "Perry Como", length: 172000, link: "cYSczTW_jH4", weight: 6, special:”holiday” }, // CM
+      { title: "It’s the Most Wonderful Time of the Year", artist: "Andy Williams", length: 152000, link: "9JQU_3Mx6xY", weight: 7, special:”holiday” }, // CM
+      { title: "Sleigh Ride", artist: "Amy Grant", length: 215000, link: "Z_QBbCnOuf0", weight: 7, special:”holiday”}, // CM
+      { title: "Happy Holiday / The Holiday Season", artist: "Andy Williams", length: 157000, link: "Bx2YoHZml8I", weight: 7, special:”holiday”}, // CM
+      { title: "A Holly Jolly Christmas", artist: "Burl Ives", length: 136000, link: "P_dI6fVZwd0", weight: 7, special:”holiday”}, // CM
+      { title: "Do You Hear What I Hear?", artist: "Bing Crosby", length: 166000, link: "FhTnDaEmA5k", weight: 6, special:”holiday”}, // CM
+      { title: "Wonderful Christmastime", artist: "Paul McCartney", length: 228000, link: "2TfWo3GsIII", weight: 6, special:”holiday”}, // CM
+      { title: "Happy Xmas (War Is Over)", artist: "John Lennon", length: 216000, link: "flA5ndOyZbI", weight: 7, special:”holiday”}, // CM
+      { title: "Someday At Christmas", artist: "Stevie Wonder", length: 169000, link: "zvPb0DVveHU", weight: 6, special:”holiday”}, // CM
+      { title: "Rockin’ Around The Christmas Tree", artist: "Brenda Lee", length: 127000, link: "O1x-hOOrl5E", weight: 7, special:”holiday”}, // CM
+      { title: "The First Noel", artist: "Carrie Underwood", length: 269000, link: "iJfjZeiRi3g", weight: 6, special:”holiday”}, // CM
+      { title: "O Holy Night", artist: "Josh Groban", length: 289000, link: "8Uh6X7WB5UE", weight: 6, special:”holiday”}, // CM
+      { title: "Hark! The Herald Angels Sing", artist: "Amy Grant", length: 176000, link: "XwcrpDY5rXY", weight: 6, special:”holiday”}, // CM
+      { title: "Here Comes Santa Claus (Down Santa Claus Lane)", artist: "Gene Autry", length: 150000, link: "iPi9PSU589k", weight: 7, special:”holiday”}, // CM
+      { title: "I Want a Hippopotamus for Christmas (Hippo the Hero)", artist: "Gayla Peevey", length: 156000, link: "faZZ8GWxifw", weight: 6, special:”holiday”}, // CM
+      { title: "Joy To The World", artist: "for KING & COUNTRY", length: 236000, link: "2PCC94HC_ag", weight: 7, special:”holiday”}, // CM
+      { title: "God Rest Ye Merry Gentlemen", artist: "MercyMe", length: 212000, link: "Upk-WqDX-Fw", weight: 7, special:”holiday”}, // CM
+      { title: "Silver Bells", artist: "Jeremy Rosado & Riley Clemmons", length: 195000, link: "hBcjYyJTWXY", weight: 7, special:”holiday”}, // CM
+      { title: "O Come, O Come, Emmanuel", artist: "Sovereign Grace Music", length: 297000, link: "-5ULGRTG6A8", weight: 6, special:”holiday”}, // CM
     ]  
   },
     S1CF: {
@@ -73,6 +95,8 @@ const stations = {
       { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231000, link: "3nqJOc24xjM", weight: 1 },
       { title: "Ojuelegba", artist: "Wizkid ft Drake & Skepta", length: 271000, link: "0xMKf5BiodM", weight: 1},
       { title: "Van Cleef Pt 3", artist: "Manlie Donn", length: 226000, link: "T0hN9NqgIWk", weight: 1},
+      { title: "Money Walk", artist: "Skippa", length: 161000, link: "Ybknpf8hqpY", weight: 1},
+      { title: "NOKIA", artist: "PARTYNEXTDOOR & DRAKE", length: 241000, link: "rQbyl-p4l_A", weight: 1 },
     ]  
   },
 };
