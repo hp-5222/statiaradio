@@ -5,7 +5,7 @@ let lastSyncedAt = Date.now(); // The last time (Unix) it was synced
 let initialTimestamp = state.timestamp; // How far we are into the song the last time we checked
 
 function getExpectedTimestamp() {
-  return initialTimestamp + (Date.now() - lastsyncedAt);
+  return initialTimestamp + (Date.now() - lastSyncedAt);
 }
 
 const tag = document.createElement("script");
