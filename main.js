@@ -45,22 +45,22 @@ const stations = {
   S1FW: {
     frequency: 96.3,
     songs: [
-      { title: "Choosin’ Texas", artist: "Ella Langley", length: 233000, link: "3s1sZbW7Rt8", weight: 8 }, // AC 
-      { title: "Girls Like You", artist: "Maroon 5", length: 216000, link: "ULFXeCsiXUQ", weight: 7 }, // AC
-      { title: "Thnks fr th Mmrs", artist: "Fall Out Boy", length: 204000, link: "j7aQDJLjiD4", weight: 7 }, // AC
-      { title: "Iris", artist: "Goo Goo Dolls", length: 290000, link: "Dy_eP-mqWow", weight: 6 }, // AC
-      { title: "Head Over Feet", artist: "Alanis Morissette", length: 266000, link: "IqVnCj8kuyA", weight: 6 }, // AC
-      { title: "Self Esteem", artist: "The Offspring", length: 258000, link: "7ifeDVAE_Zg", weight: 6 }, // AC
-      { title: "Breakaway", artist: "Kelly Clarkson", length: 238000, link: "r2QyLA5w3ps", weight: 7 }, // AC
-      { title: "Cruel Summer", artist: "Taylor Swift", length: 179000, link: "aC9HkZW2hZk", weight: 6 }, // AC
-      { title: "Breathe", artist: "Faith Hill", length: 251000, link: "Mkdo45Y3Hg0", weight: 5 }, // AC
-      { title: "Breaking the Habit", artist: "Linkin Park", length: 197000, link: "RwTwd5tAq1U", weight: 6 }, // AC
+      { title: "Choosin’ Texas", artist: "Ella Langley", length: 233000, link: "3s1sZbW7Rt8", weight: 8, special:"AC" }, // AC 
+      { title: "Girls Like You", artist: "Maroon 5", length: 216000, link: "ULFXeCsiXUQ", weight: 7, special:"AC" }, // AC
+      { title: "Thnks fr th Mmrs", artist: "Fall Out Boy", length: 204000, link: "j7aQDJLjiD4", weight: 7, special:"AC" }, // AC
+      { title: "Iris", artist: "Goo Goo Dolls", length: 290000, link: "Dy_eP-mqWow", weight: 6, special:"AC" }, // AC
+      { title: "Head Over Feet", artist: "Alanis Morissette", length: 266000, link: "IqVnCj8kuyA", weight: 6, special:"AC" }, // AC
+      { title: "Self Esteem", artist: "The Offspring", length: 258000, link: "7ifeDVAE_Zg", weight: 6, special:"AC" }, // AC
+      { title: "Breakaway", artist: "Kelly Clarkson", length: 238000, link: "r2QyLA5w3ps", weight: 7, special:"AC" }, // AC
+      { title: "Cruel Summer", artist: "Taylor Swift", length: 179000, link: "aC9HkZW2hZk", weight: 6, special:"AC" }, // AC
+      { title: "Breathe", artist: "Faith Hill", length: 251000, link: "Mkdo45Y3Hg0", weight: 5, special:"AC" }, // AC
+      { title: "Breaking the Habit", artist: "Linkin Park", length: 197000, link: "RwTwd5tAq1U", weight: 6, special:"AC" }, // AC
       { title: "Blinding Lights", artist: "The Weeknd", length: 202000, link: "J7p4bzqLvCw", weight: 8 }, // NW
-      { title: "Rio (US Remix)", artist: "Duran Duran", length: 326000, link: "fhJ3PftkIDw", weight: 6 }, // NW
+      { title: "Rio (US Remix)", artist: "Duran Duran", length: 326000, link: "fhJ3PftkIDw", weight: 6" }, // NW
       { title: "Shut Up And Drive", artist: "Rihanna", length: 213000, link: "W-dVPdwVetU", weight: 4 }, // NW
       { title: "Time After Time", artist: "Cyndi Lauper", length: 242000, link: "7wBgcalM4c4", weight: 7 }, // NW
       { title: "Shout", artist: "Tears For Fears", length: 393000, link: "ldAp-mZqAro", weight: 4 }, // NW
-      { title: "Don’t You (Forget About Me)", artist: "Simple Minds", length: 261000, link: "Ly61QG9yWOc", weight: 6 }, // NW
+      { title: "Don’t You (Forget About Me)", artist: "Simple Minds", length: 261000, link: "Ly61QG9yWOc", weight: 6, special:"NW" }, // NW
       { title: "I Ran (So Far Away)", artist: "A Flock of Seagulls", length: 222000, link: "eIAfNNfaKQ0", weight: 7 }, // NW
       { title: "Tainted Love", artist: "Soft Cell", length: 241000, link: "HnLeHfNiEn0", weight: 6 }, // NW
       { title: "Rebel Yell", artist: "Billy Idol", length: 289000, link: "seHlHzYpWBU", weight: 7 }, // NW
@@ -152,8 +152,10 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
     const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
     
     holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart))) * 15;
+
+    let ACmultiplier = song?.special === "AC" && (((new Date().getUTCHours()-5) > 20) || ((new Date().getUTCHours()-5) < 5)) ? 0 : 1
   
-    return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient : baseWeight * recencyMultiplier
+    return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient * ACmultiplier : baseWeight * recencyMultiplier * ACmultiplier
 }
 
 
