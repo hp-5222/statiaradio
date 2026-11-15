@@ -60,8 +60,8 @@ let player;
 
 window.onYouTubeIframeAPIReady = () => {
   player = new YT.Player("youtube-player", {
-    width: "640",
-    height: "360",
+    width: "600",
+    height: "320",
     videoId: state.song.link,
 
     playerVars: {
