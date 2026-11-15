@@ -3,8 +3,9 @@ h1 {
 }
 
 #youtube-player {
-  margin-left:34.5%;
-  margin-top:1%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1%;
 }
 
 button {
