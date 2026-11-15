@@ -22,7 +22,7 @@ window.onYouTubeIframeAPIReady = () => {
   player = new YT.Player("youtube-player", {
     width: "640",
     height: "360",
-    videoId: "lIxQe1R5hs0",
+    videoId: state.song.link,
 
     playerVars: {
       autoplay: 1,
@@ -42,7 +42,7 @@ window.onYouTubeIframeAPIReady = () => {
 };
 
 setInterval(() => {
-  const currentExpectedTimestamp = getExpectedTimeStamp();
+  const currentExpectedTimestamp = getExpectedTimestamp();
   if (currentExpectedTimestamp >= state.song.length) {
     state = getCurrentState(stations.S1OT);
     lastSyncedAt = Date.now();
