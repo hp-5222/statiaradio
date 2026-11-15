@@ -2,7 +2,7 @@ import { getCurrentState, stations } from './main.js';
 
 const songNameLabel = document.getElementById('songName');
 const artistNameLabel = document.getElementById('artistName');
-const logo = document.getElementById('logo').content.cloneNode(true);
+const logo = document.getElementById('logo').content.cloneNode(true).querySelector('img');
 logo.src = "media/S1OT_holiday_logo.png";
 document.body.appendChild(logo);
 
