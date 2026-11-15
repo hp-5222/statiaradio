@@ -1,8 +1,19 @@
 import { getCurrentState, stations } from './main.js';
 
-let state = getCurrentState(stations.S1OT); // All the information about the song, including how far into it
+let currentSelectedRadio = "S1OT"
+let state = getCurrentState(stations[currentlySelectedRadio]); // All the information about the song, including how far into it
 let lastSyncedAt = Date.now(); // The last time (Unix) it was synced
 let initialTimestamp = state.timestamp; // How far we are into the song the last time we checked
+
+const S1OTbutton = document.getElementById('S1OT');
+S1OTbutton.addEventListener('click', function(event) {
+  currentSelectedRadio = "S1OT";
+});
+
+const S1FWbutton = document.getElementById('S1FW');
+S1FWbutton.addEventListener('click', function(event) {
+  currentSelectedRadio = "S1FW";
+});
 
 function getExpectedTimestamp() {
   return initialTimestamp + (Date.now() - lastSyncedAt);
