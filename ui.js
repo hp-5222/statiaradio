@@ -59,7 +59,7 @@ window.onYouTubeIframeAPIReady = () => {
 setInterval(() => {
   const currentExpectedTimestamp = getExpectedTimestamp();
   if (currentExpectedTimestamp >= state.song.length) {
-    state = getCurrentState(stations[currentSelectedSong]);
+    state = getCurrentState(stations[currentSelectedRadio]);
     lastSyncedAt = Date.now();
     initialTimestamp = state.timestamp;
     player.loadVideoById(state.song.link);
