@@ -234,4 +234,17 @@ function getCurrentState(station, time = Date.now()) {
   };
 }
 
+function getWeeklyAirplay(stations, weekStart, history = []) {
+  const end = weekStart + 7*864e5, data = new Map(), key = s => s.id ?? [s.title,s.artist].map(v => v.normalize("NFKD").toLowerCase().replace(/[^\p{L}\p{N}]/gu,"")).join("|");
+  for (const [sid,st] of Object.entries(stations)) for (let b = Math.floor(weekStart/216e5)*216e5; b < end; b += 216e5) for (const s of getListFromBlock(st,b)) if (s.startTime >= weekStart && s.startTime < end) { const id = key(s), r = data.get(id) || {id,title:s.title.trim(),artist:s.artist,link:s.link,plays:0,stations:{}}; r.plays++; r.stations[sid] = (r.stations[sid]||0)+1; data.set(id,r); }
+  const prev = history.at(-1)||[], chart = [...data.values()].sort((a,b) => b.plays-a.plays).map((s,i) => { const p = prev.findIndex(x => x.id===s.id), old = p<0?null:prev[p], rank = i+1, ranks = history.map(h => h.findIndex(x => x.id===s.id)+1).filter(n => n>0); return {...s,rank,previousPosition:old?(old.rank??p+1):null,positionChange:old?(old.rank??p+1)-rank:null,playChange:s.plays-(old?.plays||0),newEntry:!old,weeksOnChart:1+ranks.length,peakPosition:Math.min(rank,...ranks)}; });
+  return {chart,newEntries:chart.filter(s => s.newEntry),gainers:chart.filter(s => s.positionChange>0).sort((a,b) => b.positionChange-a.positionChange),drops:chart.filter(s => s.positionChange<0).sort((a,b) => a.positionChange-b.positionChange)};
+}
+
+const history = []; // Load previous weekly charts here
+const report = getWeeklyAirplay(stations, Date.UTC(2026,10,9), history);
+console.table(report.chart);
+console.log("NEW ENTRIES:",report.newEntries,"GAINERS:",report.gainers,"DROPS:",report.drops);
+history.push(report.chart); // Save this for next week
+
 export { getCurrentState, stations };
