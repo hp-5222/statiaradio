@@ -56,7 +56,7 @@ const stations = {
       { title: "Breathe", artist: "Faith Hill", length: 251000, link: "Mkdo45Y3Hg0", weight: 5, special:"AC" }, // AC
       { title: "Breaking the Habit", artist: "Linkin Park", length: 197000, link: "RwTwd5tAq1U", weight: 6, special:"AC" }, // AC
       { title: "Blinding Lights", artist: "The Weeknd", length: 202000, link: "J7p4bzqLvCw", weight: 8 }, // NW
-      { title: "Rio (US Remix)", artist: "Duran Duran", length: 326000, link: "fhJ3PftkIDw", weight: 6" }, // NW
+      { title: "Rio (US Remix)", artist: "Duran Duran", length: 326000, link: "fhJ3PftkIDw", weight: 6 }, // NW
       { title: "Shut Up And Drive", artist: "Rihanna", length: 213000, link: "W-dVPdwVetU", weight: 4 }, // NW
       { title: "Time After Time", artist: "Cyndi Lauper", length: 242000, link: "7wBgcalM4c4", weight: 7 }, // NW
       { title: "Shout", artist: "Tears For Fears", length: 393000, link: "ldAp-mZqAro", weight: 4 }, // NW
