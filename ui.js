@@ -19,6 +19,14 @@ S1FWbutton.addEventListener('click', function(event) {
   player.loadVideoById(state.song.link);
 });
 
+const S1CFbutton = document.getElementById('S1CF');
+S1CFbutton.addEventListener('click', function(event) {
+  currentSelectedRadio = "S1CF";
+  state = getCurrentState(stations[currentSelectedRadio]);
+  player.loadVideoById(state.song.link);
+});
+
+
 function getExpectedTimestamp() {
   return initialTimestamp + (Date.now() - lastSyncedAt);
 }
