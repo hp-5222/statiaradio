@@ -47,6 +47,7 @@ const stations = {
       { title: "Underneath the Tree", artist: "Kelly Clarkson", length: 230000, link: "YfF10ow4YEo", weight: 10, special:"holiday"},
       { title: "Rockin' Around The Christmas Tree", artist: "Brenda Lee", length: 128000, link: "TFsZy9t-qDc", weight: 7, special:"holiday"},
       { title: "take me home (4 christmas)", artist: "Olivia Rodrigo", length: 177000, link: "nE_znSndRuQ", weight: 4, special:"holiday"},
+      { title: "santa doesn't know you like i do", artist: "Sabrina Carpenter", length: 189000, link: "N3fknVEmefA", weight: 4, special:"holiday"},
     ]  
   },
   S1FW: {
