@@ -28,6 +28,9 @@ const stations = {
       { title: "positions", artist: "Ariana Grande", length: 178000, link: "tcYodQoapMg", weight: 5 },
       { title: "we can't be friends (wait for your love)", artist: "Ariana Grande", length: 177000, link: "UdRAXWNvjzE", weight: 7 },
       { title: "drivers license", artist: "Olivia Rodrigo", length: 242000, link: "2PRvp-mP_q0", weight: 10 },
+      { title: "august", artist: "Taylor Swift", length: 264000, link: "nn_0zPAfyo8", weight: 10 },
+      { title: "we fell in love in october", artist: "girl in red", length: 187000, link: "iggmiF7DNoM", weight: 7 },
+      { title: "Midnight Sun", artist: "Zara Larsson", length: 187000, link: "uvY8fdgezLQ", weight: 25 },
       
       { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
       { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 347000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
