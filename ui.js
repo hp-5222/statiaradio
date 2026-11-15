@@ -9,6 +9,8 @@ const S1OTbutton = document.getElementById('S1OT');
 S1OTbutton.addEventListener('click', function(event) {
   currentSelectedRadio = "S1OT";
   state = getCurrentState(stations[currentSelectedRadio]);
+  lastSyncedAt = Date.now();
+  initialTimestamp = state.timestamp;
   player.loadVideoById(state.song.link);
 });
 
@@ -16,6 +18,8 @@ const S1FWbutton = document.getElementById('S1FW');
 S1FWbutton.addEventListener('click', function(event) {
   currentSelectedRadio = "S1FW";
   state = getCurrentState(stations[currentSelectedRadio]);
+  lastSyncedAt = Date.now();
+  initialTimestamp = state.timestamp;
   player.loadVideoById(state.song.link);
 });
 
@@ -23,6 +27,8 @@ const S1CFbutton = document.getElementById('S1CF');
 S1CFbutton.addEventListener('click', function(event) {
   currentSelectedRadio = "S1CF";
   state = getCurrentState(stations[currentSelectedRadio]);
+  lastSyncedAt = Date.now();
+  initialTimestamp = state.timestamp;
   player.loadVideoById(state.song.link);
 });
 
