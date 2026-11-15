@@ -48,4 +48,8 @@ setInterval(() => {
     lastSyncedAt = Date.now();
     initialTimestamp = state.timestamp;
   }
-}, 1000);
+  const currentTime = player.getCurrentTime()*1000;
+  if (Math.abs(currentTime-currentExpectedTime) > 2000) {
+    player.seekTo(currentExpectedTime, true);
+  }
+}, 2000);
