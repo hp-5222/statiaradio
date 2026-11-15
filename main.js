@@ -12,7 +12,19 @@ const stations = {
       { title: "petal", artist: "Ariana Grande", length: 184000, link: "Tc-gXkHAri8", weight: 30 },
       { title: "deja vu", artist: "Olivia Rodrigo", length: 216000, link: "fWgboQNNfB8", weight: 10 },
       { title: "stupid song", artist: "Olivia Rodrigo", length: 216000, link: "Rt9tW3cMLhI", weight: 40 },
-    ]
+      { title: "Stop The Wedding!", artist: "Ashe", length: 208000, link: "DLV8FpyxZPQ", weight: 25 },
+      { title: "Thriller", artist: "Michael Jackson", length: 201000, link: "4V90AmXnguw", weight: 20 },
+      { title: "expectations", artist: "Olivia Rodrigo, Chappell Roan", length: 224000, link: "SmzLX_weRMc", weight: 30 },
+      { title: "Housewife", artist: "Tate McRae", length: 209000, link: "DPEodkHzH-s", weight: 40 },
+      { title: "The Fate of Ophelia", artist: "Taylor Swift", length: 229000, link: "rbmdfEQODOw", weight: 15 },
+      { title: "Flowers", artist: "MILEY", length: 201000, link: "G7KNmW9a75Y", weight: 10 },
+      { title: "Bass Persuades", artist: "MILEY", length: 238000, link: "aWpw-Ynl0Yc", weight: 15 },
+      { title: "Man I Need", artist: "Olivia Dean", length: 201000, link: "oIv_Y2RPQ_A", weight: 60 },
+      { title: "So Easy (To Fall In Love)", artist: "Olivia Dean", length: 196000, link: "3sur4BmjQt8", weight: 55 },
+      { title: "ANIMAL", artist: "KATSEYE", length: 191000, link: "m7k9UMcHbr0", weight: 35 },
+      { title: "Nicole Kidman", artist: "Adéla", length: 181000, link: "IXA6bQsVNjs", weight: 30 },
+      { title: "oh yeah?", artist: "Steve Lacy", length: 169000, link: "yGHEis32s2Y", weight: 30 },
+    ]  
   }
 };
 
