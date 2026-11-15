@@ -2,8 +2,8 @@ const stations = {
   S1OT: {
     frequency: 104.5,
     songs: [
-      { title: "Stateside", artist: "PinkPantheress, Zara Larsson", length: 193000, link: "https://www.youtube.com/watch?v=lIxQe1R5hs0", weight: 60 },
-      { title: "hate that i made you love me", artist: "Ariana Grande", length: 197000, link: "https://www.youtube.com/watch?v=v1t4MTqdfyI", weight: 50 }
+      { title: "Stateside", artist: "PinkPantheress, Zara Larsson", length: 193000, link: "lIxQe1R5hs0", weight: 60 },
+      { title: "hate that i made you love me", artist: "Ariana Grande", length: 197000, link: "v1t4MTqdfyI", weight: 50 }
     ]
   }
 };
