@@ -2,7 +2,7 @@ import { getCurrentState, stations } from './main.js';
 
 const songNameLabel = document.getElementById('songName');
 const artistNameLabel = document.getElementById('artistName');
-const logo = document.getElementbyId('logo');
+const logo = document.getElementById('logo');
 
 let currentSelectedRadio = "S1OT"
 let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
