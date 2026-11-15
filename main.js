@@ -38,7 +38,9 @@ const stations = {
       { title: "u + me = <3", artist: "Olivia Rodrigo", length: 247000, link: "p-YnaSsGsPU", weight: 15 },
       { title: "Risk It All", artist: "Bruno Mars", length: 210000, link: "lY5V4hSLWY8", weight: 20 },
       { title: "Ain't In LA", artist: "Adéla", length: 185000, link: "K0CLc_zOWYc", weight: 35 },
-      
+      { title: "no tears left to cry", artist: "Ariana Grande", length: 238000, link: "ffxKSjUwKdU", weight: 5 },
+      { title: "Delicate", artist: "Taylor Swift", length: 234000, link: "tCXGJQYZ9JA", weight: 5 },
+
       { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
       { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 347000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
       { title: "Snowman", artist: "Sia", length: 172000, link: "gset79KMmt0", weight: 10, special:"holiday"},
