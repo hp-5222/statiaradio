@@ -1,6 +1,7 @@
 const stations = {
   S1OT: {
     frequency: 104.5,
+    reach: 20000,
     songs: [
       { title: "Stateside", artist: "PinkPantheress, Zara Larsson", length: 193000, link: "lIxQe1R5hs0", weight: 60 },
       { title: "hate that i made you love me", artist: "Ariana Grande", length: 197000, link: "v1t4MTqdfyI", weight: 50 },
@@ -50,6 +51,7 @@ const stations = {
   },
   S1FW: {
     frequency: 96.3,
+    reach: 700,
     songs: [
       { title: "Choosin’ Texas", artist: "Ella Langley", length: 233000, link: "3s1sZbW7Rt8", weight: 8, special:"AC" }, // AC 
       { title: "Girls Like You", artist: "Maroon 5", length: 216000, link: "ULFXeCsiXUQ", weight: 7, special:"AC" }, // AC
@@ -115,6 +117,7 @@ const stations = {
   },
     S1CF: {
     frequency: 101.2,
+    reach: 10000,
     songs: [
       { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231000, link: "3nqJOc24xjM", weight: 1 },
       { title: "Ojuelegba", artist: "Wizkid ft Drake & Skepta", length: 271000, link: "0xMKf5BiodM", weight: 1},
@@ -226,8 +229,8 @@ function getCurrentState(station, time = Date.now()) {
 
 function getWeeklyAirplay(stations, weekStart, history = []) {
   const end = weekStart + 7*864e5, data = new Map(), key = s => s.id ?? [s.title,s.artist].map(v => v.normalize("NFKD").toLowerCase().replace(/[^\p{L}\p{N}]/gu,"")).join("|");
-  for (const [sid,st] of Object.entries(stations)) for (let b = Math.floor(weekStart/216e5)*216e5; b < end; b += 216e5) for (const s of getListFromBlock(st,b)) if (s.startTime >= weekStart && s.startTime < end) { const id = key(s), r = data.get(id) || {id,title:s.title.trim(),artist:s.artist,link:s.link,plays:0,stations:{}}; r.plays++; r.stations[sid] = (r.stations[sid]||0)+1; data.set(id,r); }
-  const prev = history.at(-1)||[], chart = [...data.values()].sort((a,b) => b.plays-a.plays).map((s,i) => { const p = prev.findIndex(x => x.id===s.id), old = p<0?null:prev[p], rank = i+1, ranks = history.map(h => h.findIndex(x => x.id===s.id)+1).filter(n => n>0); return {...s,rank,previousPosition:old?(old.rank??p+1):null,positionChange:old?(old.rank??p+1)-rank:null,playChange:s.plays-(old?.plays||0),newEntry:!old,weeksOnChart:1+ranks.length,peakPosition:Math.min(rank,...ranks)}; });
+  for (const [sid,st] of Object.entries(stations)) for (let b = Math.floor(weekStart/216e5)*216e5; b < end; b += 216e5) for (const s of getListFromBlock(st,b)) if (s.startTime >= weekStart && s.startTime < end) { const id = key(s), r = data.get(id) || {id,title:s.title.trim(),artist:s.artist,link:s.link,plays:0,stations:{}}; r.plays++; r.impressions = (r.impressions||0)+st.reach; r.stations[sid] = (r.stations[sid]||0)+1; data.set(id,r); }
+  const prev = history.at(-1)||[], chart = [...data.values()].sort((a,b) => b.impressions-a.impressions).map((s,i) => { const p = prev.findIndex(x => x.id===s.id), old = p<0?null:prev[p], rank = i+1, ranks = history.map(h => h.findIndex(x => x.id===s.id)+1).filter(n => n>0); return {...s,rank,previousPosition:old?(old.rank??p+1):null,positionChange:old?(old.rank??p+1)-rank:null,playChange:s.plays-(old?.plays||0),newEntry:!old,weeksOnChart:1+ranks.length,peakPosition:Math.min(rank,...ranks)}; });
   return {chart,newEntries:chart.filter(s => s.newEntry),gainers:chart.filter(s => s.positionChange>0).sort((a,b) => b.positionChange-a.positionChange),drops:chart.filter(s => s.positionChange<0).sort((a,b) => a.positionChange-b.positionChange)};
 }
 
