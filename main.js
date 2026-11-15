@@ -43,7 +43,7 @@ function getListFromBlock(station, block) {
     const remaining = block+applicableWindow-simulatedTime; // How much more time playtime is left in the block
     const eligibleSongs = station.songs.filter(song => song.length <= remaining);
     if (eligibleSongs.length === 0) break;
-    const song = selectWeightedSong(eligibleSongs, random;
+    const song = selectWeightedSong(eligibleSongs, random);
     blockPlaylist.push({...song, startTime: simulatedTime, endTime: simulatedTime+song.length});
     simulatedTime += song.length;
   }
