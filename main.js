@@ -47,7 +47,7 @@ function getListFromBlock(station, block) {
     blockPlaylist.push({...song, startTime: simulatedTime, endTime: simulatedTime+song.length});
     simulatedTime += song.length;
   }
-  return blockPlaylist
+  return blockPlaylist;
 }
 
 function getCurrentState(station, time = Date.now()) {
@@ -58,11 +58,12 @@ function getCurrentState(station, time = Date.now()) {
     return {
       song: null,
       timestamp: null
-    }
+    };
+  }
   return {
     song: currentSong,
     timestamp: time - currentSong.startTime
-  }
+  };
 }
 
 console.log(getCurrentState(stations.S1OT));
