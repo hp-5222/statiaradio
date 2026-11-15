@@ -54,7 +54,7 @@ const stations = {
     S1CF: {
     frequency: 101.2,
     songs: [
-      { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231,000, link: "3nqJOc24xjM", weight: 1 },
+      { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231000, link: "3nqJOc24xjM", weight: 1 },
     ]  
   },
 };
