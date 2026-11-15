@@ -25,7 +25,22 @@ const stations = {
       { title: "Nicole Kidman", artist: "Adéla", length: 181000, link: "IXA6bQsVNjs", weight: 30 },
       { title: "oh yeah?", artist: "Steve Lacy", length: 169000, link: "yGHEis32s2Y", weight: 30 },
     ]  
-  }
+  },
+  S1FW: {
+    frequency: 96.3,
+    songs: [
+      { title: "Choosin’ Texas", artist: "Ella Langley", length: 233000, link: "3s1sZbW7Rt8", weight: 8 }, // AC 
+      { title: "Girls Like You", artist: "Maroon 5", length: 216000, link: "ULFXeCsiXUQ", weight: 7 }, // AC
+      { title: "Thnks fr th Mmrs", artist: "Fall Out Boy", length: 204000, link: "j7aQDJLjiD4", weight: 7 }, // AC
+      { title: "Iris", artist: "Goo Goo Dolls", length: 290000, link: "Dy_eP-mqWow", weight: 6 }, // AC
+      { title: "Head Over Feet", artist: "Alanis Morissette", length: 266000, link: "IqVnCj8kuyA", weight: 6 }, // AC
+      { title: "Self Esteem", artist: "The Offspring", length: 258000, link: "7ifeDVAE_Zg", weight: 6 }, // AC
+      { title: "Breakaway", artist: "Kelly Clarkson", length: 238000, link: "r2QyLA5w3ps", weight: 7 }, // AC
+      { title: "Cruel Summer", artist: "Taylor Swift", length: 179000, link: "aC9HkZW2hZk", weight: 6 }, // AC
+      { title: "Breathe", artist: "Faith Hill", length: 251000, link: "Mkdo45Y3Hg0", weight: 5 }, // AC
+      { title: "Breaking the Habit", artist: "Linkin Park", length: 197000, link: "e7bqZGPyFI", weight: 6 }, // AC
+    ]  
+  },
 };
 
 const mb32=s=>{let a=0;for(let c of s)a=Math.imul(31,a)+c.charCodeAt(0)|0;return t=>(a=a+1831565813|0,t=Math.imul(a^a>>>15,1|a),t=t+Math.imul(t^t>>>7,61|t)^t,(t^t>>>14)>>>0)/2**32};
