@@ -66,4 +66,4 @@ function getCurrentState(station, time = Date.now()) {
   };
 }
 
-export { getCurrentState };
+export { getCurrentState, stations };
