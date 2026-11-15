@@ -121,7 +121,7 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
     if (now > christmas) {
       christmas.setFullYear(christmas.getFullYear() + 1);
     }
-    const seasonStart = new Date(now.getFullYear(), 10, 1);
+    const seasonStart = new Date(christmas.getFullYear(), 10, 10);
     const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
     
     // holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart))) * 10;
