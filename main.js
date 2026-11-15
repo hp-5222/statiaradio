@@ -93,6 +93,23 @@ const stations = {
       { title: "God Rest Ye Merry Gentlemen", artist: "MercyMe", length: 212000, link: "Upk-WqDX-Fw", weight: 7, special:"holiday"}, // CM
       { title: "Silver Bells", artist: "Jeremy Rosado & Riley Clemmons", length: 195000, link: "hBcjYyJTWXY", weight: 7, special:"holiday"}, // CM
       { title: "O Come, O Come, Emmanuel", artist: "Sovereign Grace Music", length: 297000, link: "-5ULGRTG6A8", weight: 6, special:"holiday"}, // CM
+      { title: "Do They Know It’s Christmas?", artist: "Band Aid", length: 223000, link: "XsCbFpn7fDo", weight: 7, special:"holiday"}, // CM
+      { title: "Christmas Canon", artist: "Trans-Siberian Orchestra", length: 260000, link: "LgT7MEWMKOk", weight: 7, special:"holiday"}, // CM
+      { title: "Little Saint Nick", artist: "The Beach Boys", length: 131000, link: "5dyXN74aZGQ", weight: 7, special:"holiday"}, // CM
+      { title: "My Favorite Things", artist: "The Supremes", length: 173000, link: "zC54waT6ccQ", weight: 7, special:"holiday"}, // CM
+      { title: "It’s Beginning To Look Like Christmas", artist: "Bing Crosby", length: 167000, link: "d82Xzey-4B4", weight: 7, special:"holiday"}, // CM
+      { title: "Winter Wonderland", artist: "Bing Crosby", length: 145000, link: "ngJPlhrd_Iw", weight: 7, special:"holiday"}, // CM
+      { title: "White Christmas", artist: "The Drifters", length: 159000, link: "bQ6LIS6m8qE", weight: 7, special:"holiday"}, // CM
+      { title: "Have Yourself A Merry Little Christmas", artist: "Frank Sinatra", length: 207000, link: "pvA7-EjaSPI", weight: 6, special:"holiday"}, // CM
+      { title: "Santa Tell Me", artist: "Ariana Grande", length: 205000, link: "2TEAh5SHZGs", weight: 7, special:"holiday"}, // CM
+      { title: "Jingle Bell Rock", artist: "Bobby Helms", length: 131000, link: "Z0ajuTaHBtM", weight: 7, special:"holiday"}, // CM
+      { title: "Last Christmas", artist: "Wham!", length: 263000, link: "GJvGf_ifiKw", weight: 8, special:"holiday"}, // CM
+      { title: "Feliz Navidad", artist: "José Feliciano", length: 184000, link: "VAkhdcmbmEc", weight: 7, special:"holiday"}, // CM
+      { title: "Christmas (Baby Please Come Home)", artist: "Darlene Love", length: 167000, link: "by-6gww-DHE", weight: 7, special:"holiday"}, // CM
+      { title: "Believe", artist: "Josh Groban", length: 259000, link: "3Avycrez66o", weight: 7, special:"holiday"}, // CM
+      { title: "Frosty The Snowman", artist: "Kimberly Locke", length: 148000, link: "4ydgcgI1FpI", weight: 7, special:"holiday"}, // CM
+      { title: "Christmas Hits Different", artist: "TobyMac & Tasha Layton", length: 209000, link: "DubggyNmioQ", weight: 7, special:"holiday"}, // CM
+      { title: "There Is No Christmas Like a Home Christmas", artist: "Perry Como", length: 168000, link: "ljE62n4Iug4", weight: 6, special:"holiday"}, // CM
     ]  
   },
     S1CF: {
