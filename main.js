@@ -66,4 +66,4 @@ function getCurrentState(station, time = Date.now()) {
   };
 }
 
-console.log(getCurrentState(stations.S1OT));
+export { getCurrentState };
