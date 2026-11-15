@@ -35,7 +35,8 @@ const stations = {
       { title: "the cure", artist: "Olivia Rodrigo", length: 314000, link: "B402rKl4bUg", weight: 7 },
       { title: "maggots for brains", artist: "Olivia Rodrigo", length: 240000, link: "lwiQSOaI_XE", weight: 15 },
       { title: "u + me = <3", artist: "Olivia Rodrigo", length: 247000, link: "p-YnaSsGsPU", weight: 15 },
-
+      { title: "Risk It All", artist: "Bruno Mars", length: 210000, link: "lY5V4hSLWY8", weight: 20 },
+      { title: "Ain't In LA", artist: "Adéla", length: 185000, link: "K0CLc_zOWYc", weight: 35 },
       
       { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
       { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 347000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
