@@ -142,16 +142,19 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
         }
     }
   
-    let holidayCoefficient = song?.special === "holiday" ? 0 : 1;
-    const now = new Date(simulatedTime);
-    let christmas = new Date(now.getFullYear(), 11, 25);
-    if (now > christmas) {
-      christmas.setFullYear(christmas.getFullYear() + 1);
-    }
-    const seasonStart = new Date(christmas.getFullYear(), 10, 10);
-    const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
+    let holidayCoefficient = 1;
+
+    let christmasYear = new Date(simulatedTime).getUTCFullYear();
+    let christmas = Date.UTC(christmasYear, 11, 25);
     
-    holidayCoefficient = Math.max(0,Math.min(1, (now - seasonStart) / (christmas - seasonStart))) * 15;
+    if (simulatedTime > christmas) {
+        christmasYear++;
+        christmas = Date.UTC(christmasYear, 11, 25);
+    }
+    
+    const seasonStart = Date.UTC(christmasYear, 10, 10);
+    
+    holidayCoefficient = Math.max(0,Math.min(1,(simulatedTime - seasonStart) / (christmas - seasonStart))) * 15;
 
     let hour = new Date(simulatedTime).getUTCHours();
     let isNight = hour >= 21 || hour < 6;
