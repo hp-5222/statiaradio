@@ -1,7 +1,7 @@
 import { getCurrentState, stations } from './main.js';
 
 let currentSelectedRadio = "S1OT"
-let state = getCurrentState(stations[currentlySelectedRadio]); // All the information about the song, including how far into it
+let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
 let lastSyncedAt = Date.now(); // The last time (Unix) it was synced
 let initialTimestamp = state.timestamp; // How far we are into the song the last time we checked
 
