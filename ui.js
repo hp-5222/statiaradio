@@ -1,9 +1,14 @@
 import { getCurrentState, stations } from './main.js';
 
+const songNameLabel = document.getElementById('songName');
+const artistNameLabel = document.getElementById('artistName');
+
 let currentSelectedRadio = "S1OT"
 let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
 let lastSyncedAt = Date.now(); // The last time (Unix) it was synced
 let initialTimestamp = state.timestamp; // How far we are into the song the last time we checked
+songNameLabel.textContent = state.song.title
+artistNameLabel.textContent = state.song.artist
 
 const S1OTbutton = document.getElementById('S1OT');
 S1OTbutton.addEventListener('click', function(event) {
@@ -11,6 +16,8 @@ S1OTbutton.addEventListener('click', function(event) {
   state = getCurrentState(stations[currentSelectedRadio]);
   lastSyncedAt = Date.now();
   initialTimestamp = state.timestamp;
+  songNameLabel.textContent = state.song.title
+  artistNameLabel.textContent = state.song.artist
   player.loadVideoById(state.song.link);
 });
 
@@ -20,6 +27,8 @@ S1FWbutton.addEventListener('click', function(event) {
   state = getCurrentState(stations[currentSelectedRadio]);
   lastSyncedAt = Date.now();
   initialTimestamp = state.timestamp;
+  songNameLabel.textContent = state.song.title
+  artistNameLabel.textContent = state.song.artist
   player.loadVideoById(state.song.link);
 });
 
@@ -29,6 +38,8 @@ S1CFbutton.addEventListener('click', function(event) {
   state = getCurrentState(stations[currentSelectedRadio]);
   lastSyncedAt = Date.now();
   initialTimestamp = state.timestamp;
+  songNameLabel.textContent = state.song.title
+  artistNameLabel.textContent = state.song.artist
   player.loadVideoById(state.song.link);
 });
 
@@ -76,6 +87,8 @@ setInterval(() => {
     state = getCurrentState(stations[currentSelectedRadio]);
     lastSyncedAt = Date.now();
     initialTimestamp = state.timestamp;
+    songNameLabel.textContent = state.song.title
+    artistNameLabel.textContent = state.song.artist
     player.loadVideoById(state.song.link);
   }
   if (player.getPlayerState() === YT.PlayerState.PAUSED) {
