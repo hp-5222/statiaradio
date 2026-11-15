@@ -44,7 +44,7 @@ const stations = {
       { title: "obsessed", artist: "Olivia Rodrigo", length: 184000, link: "QXcjPySjdJU", weight: 1 },
       
       { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
-      { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 347000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
+      { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 227000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
       { title: "Snowman", artist: "Sia", length: 172000, link: "gset79KMmt0", weight: 10, special:"holiday"},
       { title: "Santa Tell Me", artist: "Ariana Grande", length: 339000, link: "nlR0MkrRklg", weight: 15, special:"holiday"},
       { title: "Last Christmas", artist: "Wham!", length: 278000, link: "E8gmARGvPlI", weight: 10, special:"holiday"},
