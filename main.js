@@ -39,6 +39,16 @@ const stations = {
       { title: "Cruel Summer", artist: "Taylor Swift", length: 179000, link: "aC9HkZW2hZk", weight: 6 }, // AC
       { title: "Breathe", artist: "Faith Hill", length: 251000, link: "Mkdo45Y3Hg0", weight: 5 }, // AC
       { title: "Breaking the Habit", artist: "Linkin Park", length: 197000, link: "e7bqZGPyFI", weight: 6 }, // AC
+      { title: "Blinding Lights", artist: "The Weeknd", length: 202000, link: "J7p4bzqLvCw", weight: 8 }, // NW
+      { title: "Rio (US Remix)", artist: "Duran Duran", length: 326000, link: "fhJ3PftkIDw", weight: 6 }, // NW
+      { title: "Shut Up And Drive", artist: "Rihanna", length: 213000, link: "W-dVPdwVetU", weight: 4 }, // NW
+      { title: "Time After Time", artist: "Cyndi Lauper", length: 242000, link: "7wBgcalM4c4", weight: 7 }, // NW
+      { title: "Shout", artist: "Tears For Fears", length: 393000, link: "ldAp-mZqAro", weight: 4 }, // NW
+      { title: "Don’t You (Forget About Me)", artist: "Simple Minds", length: 261000, link: "Ly61QG9yWOc", weight: 6 }, // NW
+      { title: "I Ran (So Far Away)", artist: "A Flock of Seagulls", length: 222000, link: "eIAfNNfaKQ0", weight: 7 }, // NW
+      { title: "Tainted Love", artist: "Soft Cell", length: 241000, link: "HnLeHfNiEn0", weight: 6 }, // NW
+      { title: "Rebel Yell", artist: "Billy Idol", length: 289000, link: "seHlHzYpWBU", weight: 7 }, // NW
+      { title: "White Wedding", artist: "Billy Idol", length: 253000, link: "o5oTrvdNoP4", weight: 6 }, // NW
     ]  
   },
 };
