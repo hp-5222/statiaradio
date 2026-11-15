@@ -157,7 +157,7 @@ function getListFromBlock(station, block) {
     acc[key].plays++;
     return acc;
     }, {})
-  );
+  ).sort((a, b) => b.plays - a.plays);
   
   console.log(tally);
   return blockPlaylist;
