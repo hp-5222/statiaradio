@@ -148,6 +148,7 @@ function getListFromBlock(station, block) {
     blockPlaylist.push({...song, startTime: simulatedTime, endTime: simulatedTime+song.length});
     simulatedTime += song.length;
   }
+  console.log(blockPlaylist);
   return blockPlaylist;
 }
 
