@@ -2,6 +2,7 @@ import { getCurrentState, stations } from './main.js';
 
 const songNameLabel = document.getElementById('songName');
 const artistNameLabel = document.getElementById('artistName');
+const logo = document.getElementbyId('logo');
 
 let currentSelectedRadio = "S1OT"
 let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
@@ -18,6 +19,7 @@ S1OTbutton.addEventListener('click', function(event) {
   initialTimestamp = state.timestamp;
   songNameLabel.textContent = state.song.title
   artistNameLabel.textContent = state.song.artist
+  logo.src = "media/S1OT_holiday_logo.png";
   player.loadVideoById(state.song.link);
 });
 
@@ -29,6 +31,7 @@ S1FWbutton.addEventListener('click', function(event) {
   initialTimestamp = state.timestamp;
   songNameLabel.textContent = state.song.title
   artistNameLabel.textContent = state.song.artist
+  logo.src = "media/S1FW_logo.png";
   player.loadVideoById(state.song.link);
 });
 
@@ -40,6 +43,7 @@ S1CFbutton.addEventListener('click', function(event) {
   initialTimestamp = state.timestamp;
   songNameLabel.textContent = state.song.title
   artistNameLabel.textContent = state.song.artist
+  logo.src = "media/S1FW_logo.png";
   player.loadVideoById(state.song.link);
 });
 
