@@ -24,6 +24,10 @@ const stations = {
       { title: "ANIMAL", artist: "KATSEYE", length: 191000, link: "m7k9UMcHbr0", weight: 35 },
       { title: "Nicole Kidman", artist: "Adéla", length: 181000, link: "IXA6bQsVNjs", weight: 30 },
       { title: "oh yeah?", artist: "Steve Lacy", length: 169000, link: "yGHEis32s2Y", weight: 30 },
+      { title: "Cruel Summer", artist: "Taylor Swift", length: 179000, link: "ic8j13piAhQ", weight: 10 },
+      { title: "positions", artist: "Ariana Grande", length: 178000, link: "tcYodQoapMg", weight: 5 },
+      { title: "we can't be friends (wait for your love)", artist: "Ariana Grande", length: 177000, link: "UdRAXWNvjzE", weight: 7 },
+      { title: "drivers license", artist: "Olivia Rodrigo", length: 242000, link: "2PRvp-mP_q0", weight: 10 },
     ]  
   },
   S1FW: {
@@ -55,6 +59,7 @@ const stations = {
     frequency: 101.2,
     songs: [
       { title: "Sensational ", artist: "Chris Brown ft Davido & Lojay", length: 231000, link: "3nqJOc24xjM", weight: 1 },
+      { title: "Ojuelegba", artist: "Wizkid ft Drake & Skepta", length: 271000, link: "0xMKf5BiodM", weight: 1},
     ]  
   },
 };
