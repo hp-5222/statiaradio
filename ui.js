@@ -47,6 +47,10 @@ setInterval(() => {
     state = getCurrentState(stations.S1OT);
     lastSyncedAt = Date.now();
     initialTimestamp = state.timestamp;
+    player.loadVideoById(state.song.link);
+  }
+  if (player.getPlayerState() === YT.PlayerState.PAUSED) {
+    player.playVideo();
   }
   const currentTime = player.getCurrentTime()*1000;
   if (Math.abs(currentTime-currentExpectedTimestamp) > 2000) {
