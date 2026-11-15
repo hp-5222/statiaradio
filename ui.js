@@ -3,6 +3,7 @@ import { getCurrentState, stations } from './main.js';
 const songNameLabel = document.getElementById('songName');
 const artistNameLabel = document.getElementById('artistName');
 const logo = document.getElementById('logo').content.cloneNode(true);
+logo.src = "media/S1OT_holiday_logo.png";
 document.body.appendChild(logo);
 
 let currentSelectedRadio = "S1OT"
