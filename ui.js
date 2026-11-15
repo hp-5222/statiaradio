@@ -12,6 +12,7 @@ S1OTbutton.addEventListener('click', function(event) {
 
 const S1FWbutton = document.getElementById('S1FW');
 S1FWbutton.addEventListener('click', function(event) {
+  console.log("swapped");
   currentSelectedRadio = "S1FW";
 });
 
