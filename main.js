@@ -179,7 +179,7 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
     holidayCoefficient = Math.max(0,Math.min(1,(simulatedTime - seasonStart) / (christmas - seasonStart))) * 15;
 
     let hour = new Date(simulatedTime).getUTCHours();
-    let isNight = hour >= 1 || hour < 10;
+    let isNight = hour >= 1 && hour < 10;
     let ACmultiplier = song?.special === "AC" && (isNight) ? 0 : 1;
   
     return song?.special === "holiday" ? baseWeight * recencyMultiplier * holidayCoefficient * ACmultiplier : baseWeight * recencyMultiplier * ACmultiplier
