@@ -218,6 +218,17 @@ function getListFromBlock(station, block) {
     blockPlaylist.push({...song, startTime: simulatedTime, endTime: simulatedTime+song.length});
     simulatedTime += song.length;
   }
+  const tally = Object.values(blockPlaylist.reduce((acc, song) => {
+    const key = `${song.title}-${song.artist}`;
+    if (!acc[key]) {
+      acc[key] = { ...song, plays: 0 };
+    }
+    acc[key].plays++;
+    return acc;
+    }, {})
+  ).sort((a, b) => b.plays - a.plays);
+  
+  console.log(tally);
   return blockPlaylist;
 }
 
