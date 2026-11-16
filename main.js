@@ -255,10 +255,10 @@ function getWeeklyAirplay(stations, weekStart, history = []) {
   return {chart,newEntries:chart.filter(s => s.newEntry),gainers:chart.filter(s => s.positionChange>0).sort((a,b) => b.positionChange-a.positionChange),drops:chart.filter(s => s.positionChange<0).sort((a,b) => a.positionChange-b.positionChange)};
 }
 
-const history = []; // Load previous weekly charts here
-const report = getWeeklyAirplay(stations, Date.UTC(2026,10,9), history);
-console.table(report.chart);
-console.log("NEW ENTRIES:",report.newEntries,"GAINERS:",report.gainers,"DROPS:",report.drops);
-history.push(report.chart); // Save this for next week
+//const history = []; // Load previous weekly charts here
+//const report = getWeeklyAirplay(stations, Date.UTC(2026,10,9), history);
+//console.table(report.chart);
+//console.log("NEW ENTRIES:",report.newEntries,"GAINERS:",report.gainers,"DROPS:",report.drops);
+//history.push(report.chart); // Save this for next week
 
 export { getCurrentState, stations };
