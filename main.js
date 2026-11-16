@@ -45,7 +45,8 @@ const stations = {
       { title: "Anti-Hero", artist: "Taylor Swift", length: 204000, link: "XqN2qFvY64U", weight: 0.6 },
       { title: "I Can Do It With A Broken Heart", artist: "Taylor Swift", length: 222000, link: "i8_w_m6HLJ0", weight: 0.4 },
       { title: "7 rings", artist: "Ariana Grande", length: 184000, link: "QYh6mYIJG2Y", weight: 0.5 },
-      { title: "Into You", artist: "Ariana Grande", length: 254000, link: "1ekZEVeXwek", weight: 0.7 },
+      { title: "Into You", artist: "Ariana Grande", length: 254000, link: "1ekZEVeXwek", weight: 2 },
+      { title: "Opalite", artist: "Taylor Swift", length: 238000, link: "3PJC6uPIekc", weight: 15 },
       
       { title: "All I Want For Christmas Is You", artist: "Mariah Carey", length: 242000, link: "aAkMkVFwAoo", weight: 20, special:"holiday"},
       { title: "Christmas Tree Farm", artist: "Taylor Swift", length: 227000, link: "Ozk8xq0Lp1g", weight: 7, special:"holiday"},
