@@ -18,7 +18,7 @@ const stations = {
       { title: "Thriller", artist: "Michael Jackson", length: 201000, link: "4V90AmXnguw", weight: 20 },
       { title: "expectations", artist: "Olivia Rodrigo, Chappell Roan", length: 224000, link: "SmzLX_weRMc", weight: 30 },
       { title: "Housewife", artist: "Tate McRae", length: 209000, link: "DPEodkHzH-s", weight: 40 },
-      { title: "The Fate of Ophelia", artist: "Taylor Swift", length: 229000, link: "rbmdfEQODOw", weight: 15 },
+      { title: "The Fate of Ophelia", artist: "Taylor Swift", length: 229000, link: "rbmdfEQODOw", weight: 20 },
       { title: "Flowers", artist: "MILEY", length: 201000, link: "G7KNmW9a75Y", weight: 10 },
       { title: "Bass Persuades", artist: "MILEY", length: 238000, link: "aWpw-Ynl0Yc", weight: 15 },
       { title: "Man I Need", artist: "Olivia Dean", length: 201000, link: "oIv_Y2RPQ_A", weight: 60 },
