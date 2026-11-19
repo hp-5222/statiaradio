@@ -153,7 +153,7 @@ const stations = {
       { title: "Dirty Little Secret", artist: "The All-American Rejects", length: 194000, link: "CBQsLKcLeUU", weight: 7 }, // RK
       { title: "Animal I Have Become", artist: "Three Days Grace", length: 232000, link: "ysho2xTWUYo", weight: 7 }, // RK
       { title: "Never Too Late", artist: "Three Days Grace", length: 210000, link: "SRbA_JzFKuA", weight: 2 }, // RK
-      { title: "Everlong", artist: "Foo Fighters", length: 210000, link: "AxuTd9rwEHQ", weight: 7 }, // RK
+      { title: "Everlong", artist: "Foo Fighters", length: 251000, link: "AxuTd9rwEHQ", weight: 7 }, // RK
       { title: "Bitter Sweet Symphony", artist: "The Verve", length: 358000, link: "JnRw8bXVbPI", weight: 6 }, // RK
       { title: "Mr. Brightside", artist: "The Killers", length: 223000, link: "m2zUrruKjDQ", weight: 7 }, // RK
       { title: "Somebody Told Me", artist: "The Killers", length: 198000, link: "liRMxUT8A2c", weight: 6 }, // RK
