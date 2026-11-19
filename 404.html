@@ -5,7 +5,7 @@
 <head>
   <script>
     const path = window.location.pathname;
-    const base = "/radio/";
+    const base = "/statiaradio/";
     const station = path.replace(base, "").replace(/\/$/, "");
     window.location.replace(base + "?station=" + encodeURIComponent(station));
   </script>
