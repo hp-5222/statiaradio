@@ -1,0 +1,16 @@
+<!-- this extremely hacky lol -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    const path = window.location.pathname;
+    const base = "/radio/";
+    const station = path.replace(base, "").replace(/\/$/, "");
+    window.location.replace(base + "?station=" + encodeURIComponent(station));
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
