@@ -125,7 +125,7 @@ const stations = {
       { title: "There Is No Christmas Like a Home Christmas", artist: "Perry Como", length: 168000, link: "ljE62n4Iug4", weight: 6, special:"holiday"}, // CM
     ]  
   },
-    S1CF: {
+  S1CF: {
     frequency: 101.2,
     reach: 10000,
     songs: [
@@ -134,6 +134,52 @@ const stations = {
       { title: "Van Cleef Pt 3", artist: "Manlie Donn", length: 226000, link: "T0hN9NqgIWk", weight: 1},
       { title: "Money Walk", artist: "Skippa", length: 161000, link: "Ybknpf8hqpY", weight: 1},
       { title: "NOKIA", artist: "PARTYNEXTDOOR & DRAKE", length: 241000, link: "rQbyl-p4l_A", weight: 1 },
+    ]  
+  },
+  S1JR: {
+    frequency: 100.7,
+    reach: 10000,
+    songs: [
+      { title: "Kryptonite", artist: "3 Doors Down", length: 234000, link: "UjWZGLi-1jM", weight: 7 }, // RK 
+      { title: "When I'm Gone", artist: "3 Doors Down", length: 261000, link: "Gt4xZnBBOHQ", weight: 6 }, // RK 
+      { title: "Hanging By A Moment", artist: "Lifehouse", length: 217000, link: "NPgN0j6fm0w", weight: 7 }, // RK 
+      { title: "You And Me", artist: "Lifehouse", length: 196000, link: "8UiVtsVOERI", weight: 5 }, // RK 
+      { title: "Blind", artist: "Lifehouse", length: 301000, link: "cFBpyPTf1pE", weight: 5 }, // RK 
+      { title: "You Found Me", artist: "The Fray", length: 242000, link: "_tdWkuyFI6c", weight: 6 }, // RK 
+      { title: "How to Save a Life", artist: "The Fray", length: 263000, link: "ae7AACP1-R0", weight: 7 }, // RK
+      { title: "Home", artist: "Daughtry", length: 256000, link: "GIunAvwXOi8", weight: 6 }, // RK
+      { title: "Plowed", artist: "Sponge", length: 198000, link: "OGKRr0NmgFM", weight: 6 }, // RK
+      { title: "Inside Out", artist: "Eve 6", length: 220000, link: "WkcQt-1j-SE", weight: 6 }, // RK
+      { title: "Dirty Little Secret", artist: "The All-American Rejects", length: 194000, link: "CBQsLKcLeUU", weight: 7 }, // RK
+      { title: "Animal I Have Become", artist: "Three Days Grace", length: 232000, link: "ysho2xTWUYo", weight: 7 }, // RK
+      { title: "Never Too Late", artist: "Three Days Grace", length: 210000, link: "SRbA_JzFKuA", weight: 2 }, // RK
+      { title: "Everlong", artist: "Foo Fighters", length: 210000, link: "AxuTd9rwEHQ", weight: 7 }, // RK
+      { title: "Bitter Sweet Symphony", artist: "The Verve", length: 358000, link: "JnRw8bXVbPI", weight: 6 }, // RK
+      { title: "Mr. Brightside", artist: "The Killers", length: 223000, link: "m2zUrruKjDQ", weight: 7 }, // RK
+      { title: "Somebody Told Me", artist: "The Killers", length: 198000, link: "liRMxUT8A2c", weight: 6 }, // RK
+      { title: "Higher", artist: "Creed", length: 317000, link: "FLTx18QMXmE", weight: 7 }, // RK
+      { title: "One Last Breath", artist: "Creed", length: 239000, link: "qcX9HNIHwkg", weight: 5 }, // RK
+      { title: "Slide", artist: "Goo Goo Dolls", length: 213000, link: "KXRKoM0misA", weight: 6 }, // RK
+      { title: "Iris", artist: "Goo Goo Dolls", length: 290000, link: "Dy_eP-mqWow", weight: 7 }, // RK
+      { title: "Here Is Gone", artist: "Goo Goo Dolls", length: 239000, link: "BLfVK4NAUXg", weight: 6 }, // RK
+      { title: "Nothing Else Matters", artist: "Metallica", length: 389000, link: "pTYIf2pkxzQ", weight: 4 }, // RK
+      { title: "Enter Sandman", artist: "Metallica", length: 332000, link: "CHIWNDAwTqQ", weight: 6 }, // RK
+      { title: "Uprising", artist: "Muse", length: 305000, link: "Y4R6k8_iIkE", weight: 6 }, // RK
+      { title: "Resistance", artist: "Muse", length: 347000, link: "ywpJACWd0dA", weight: 5 }, // RK
+      { title: "United States of Eurasia (+Collateral Damage)", artist: "Muse", length: 347000, link: "RaTPw8M0NbM", weight: 2 }, // RK
+      { title: "Sk8er Boi", artist: "Avril Lavigne", length: 205000, link: "UYocLBXr7hQ", weight: 8 }, // RK
+      { title: "Complicated", artist: "Avril Lavigne", length: 245000, link: "DTtb9rt1tnk", weight: 7 }, // RK
+      { title: "Girlfriend", artist: "Avril Lavigne", length: 218000, link: "g0TiuFwX0r8", weight: 6 }, // RK
+      { title: "When You're Gone", artist: "Avril Lavigne", length: 241000, link: "9ep1pjnt2nI", weight: 6 }, // RK
+      { title: "Head Over Feet", artist: "Alanis Morissette", length: 266000, link: "IqVnCj8kuyA", weight: 7 }, // RK
+      { title: "You Learn", artist: "Alanis Morissette", length: 240000, link: "vZPJYEAf4Mg", weight: 6 }, // RK 
+      { title: "Ironic", artist: "Alanis Morissette", length: 226000, link: "AakBK5leleE", weight: 6 }, // RK
+      { title: "Hand in My Pocket", artist: "Alanis Morissette", length: 222000, link: "jXd6_D6SBwk", weight: 5 }, // RK
+      { title: "You Oughta Know", artist: "Alanis Morissette", length: 250000, link: "iWFE1pekWyI", weight: 5 }, // RK
+      { title: "my way", artist: "Olivia Rodrigo", length: 181000, link: "9YMJ-U1dR04", weight: 7 }, // RK
+      { title: "Behind These Hazel Eyes", artist: "Kelly Clarkson", length: 199000, link: "J2wYJERAN3Q", weight: 7 }, // RK
+      { title: "Since U Been Gone", artist: "Kelly Clarkson", length: 189000, link: "p0BiGek2bKA", weight: 7 }, // RK
+      { title: "Walk Away", artist: "Kelly Clarkson", length: 190000, link: "3553TFmkb4A", weight: 6 }, // RK
     ]  
   },
 };
