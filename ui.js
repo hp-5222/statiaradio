@@ -11,9 +11,14 @@ const stationsConfig = {
 document.getElementById('nowPlaying').after(logo);
 
 function getStationFromURL() {
-  const stationId = window.location.pathname.replace("/statiaradio/", "").replace(/\/$/, "");
+  const params = new URLSearchParams(window.location.search);
+  const redirectedStation = params.get("station");
+  const stationId = redirectedStation || window.location.pathname.replace("/statiaradio/", "").replace(/\/$/, "");
   return stations[stationId] && stationsConfig[stationId] ? stationId : "S1OT";
 }
+
+const stationFromURL = getStationFromURL();
+if (new URLSearchParams(window.location.search).has("station")) { history.replaceState(null, "", `${BASE_PATH}${stationFromURL}`); }
 
 let currentSelectedRadio = getStationFromURL();
 let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
