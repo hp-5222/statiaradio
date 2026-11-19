@@ -187,7 +187,7 @@ const stations = {
     reach: 2000,
     songs: [
       { title: "Misery Business", artist: "Paramore", length: 211000, link: "1VPotzhpAGE", weight: 5 },
-      { title: "The Only Exception", artist: "Paramore", length: 267000, link: "J7J_IWUhls", weight: 6 },
+      { title: "The Only Exception", artist: "Paramore", length: 267000, link: "J8rYO7tTYR0", weight: 6 },
       { title: "Brick By Boring Brick", artist: "Paramore", length: 262000, link: "A63VwWz1ij0", weight: 4 },
       { title: "All I Wanted", artist: "Paramore", length: 225000, link: "W7nmB20qJv4", weight: 5 },
       { title: "Still Into You", artist: "Paramore", length: 220000, link: "OblL026SvD4", weight: 5 },
