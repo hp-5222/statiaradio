@@ -3,52 +3,55 @@ import { getCurrentState, stations } from './main.js';
 const songNameLabel = document.getElementById('songName');
 const artistNameLabel = document.getElementById('artistName');
 const logo = document.getElementById('logo').content.cloneNode(true).querySelector('img');
-logo.src = "media/S1OT_holiday_logo.png";
+const stationsConfig = {
+  S1OT: { logo: "media/S1OT_holiday_logo.png" },
+  S1FW: { logo: "media/S1FW_logo.png" },
+  S1CF: { logo: "media/S1FW_logo.png" }
+};
 document.getElementById('nowPlaying').after(logo);
 
-let currentSelectedRadio = "S1OT"
+function getStationFromURL() {
+  const stationId = window.location.pathname.replace(/^\/|\/$/g, "");
+  return stations[stationId] && stationsConfig[stationId] ? stationId : "S1OT";
+}
+
+let currentSelectedRadio = getStationFromURL();
 let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
 let lastSyncedAt = Date.now(); // The last time (Unix) it was synced
 let initialTimestamp = state.timestamp; // How far we are into the song the last time we checked
+let playerReady = false;
 songNameLabel.textContent = state.song.title
 artistNameLabel.textContent = state.song.artist
+logo.src = stationsConfig[currentSelectedRadio].logo;
 
-const S1OTbutton = document.getElementById('S1OT');
-S1OTbutton.addEventListener('click', function(event) {
-  currentSelectedRadio = "S1OT";
-  state = getCurrentState(stations[currentSelectedRadio]);
+function switchStation(stationId, updateURL = true) {
+  if (!stations[stationId] || !stationsConfig[stationId]) {return;}
+
+  currentSelectedRadio = stationId;
+  state = getCurrentState(stations[stationId]);
   lastSyncedAt = Date.now();
   initialTimestamp = state.timestamp;
-  songNameLabel.textContent = state.song.title
-  artistNameLabel.textContent = state.song.artist
-  logo.src = "media/S1OT_holiday_logo.png";
-  player.loadVideoById(state.song.link);
+
+  songNameLabel.textContent = state.song.title;
+  artistNameLabel.textContent = state.song.artist;
+  logo.src = stationsConfig[stationId].logo;
+
+  if (playerReady) {
+    player.loadVideoById(state.song.link);
+  }
+
+  if (updateURL && window.location.pathname !== `/${stationId}`) {
+    history.pushState(null, "", `/${stationId}`);
+  }
+}
+
+Object.keys(stationsConfig).forEach(stationId => {
+  const button = document.getElementById(stationId);
+  if (!button) return;
+  button.addEventListener('click', () => {switchStation(stationId);});
 });
 
-const S1FWbutton = document.getElementById('S1FW');
-S1FWbutton.addEventListener('click', function(event) {
-  currentSelectedRadio = "S1FW";
-  state = getCurrentState(stations[currentSelectedRadio]);
-  lastSyncedAt = Date.now();
-  initialTimestamp = state.timestamp;
-  songNameLabel.textContent = state.song.title
-  artistNameLabel.textContent = state.song.artist
-  logo.src = "media/S1FW_logo.png";
-  player.loadVideoById(state.song.link);
-});
-
-const S1CFbutton = document.getElementById('S1CF');
-S1CFbutton.addEventListener('click', function(event) {
-  currentSelectedRadio = "S1CF";
-  state = getCurrentState(stations[currentSelectedRadio]);
-  lastSyncedAt = Date.now();
-  initialTimestamp = state.timestamp;
-  songNameLabel.textContent = state.song.title
-  artistNameLabel.textContent = state.song.artist
-  logo.src = "media/S1FW_logo.png";
-  player.loadVideoById(state.song.link);
-});
-
+window.addEventListener('popstate', () => {switchStation(getStationFromURL(), false);});
 
 function getExpectedTimestamp() {
   return initialTimestamp + (Date.now() - lastSyncedAt);
@@ -77,7 +80,8 @@ window.onYouTubeIframeAPIReady = () => {
 
     events: {
       onReady: (event) => {
-        console.log("Player ready!");
+        playerReady = true;
+        event.target.loadVideoById(state.song.link);
       },
 
       onStateChange: (event) => {
@@ -88,6 +92,7 @@ window.onYouTubeIframeAPIReady = () => {
 };
 
 setInterval(() => {
+  if (!playerReady) return
   const currentExpectedTimestamp = getExpectedTimestamp();
   if (currentExpectedTimestamp >= state.song.length) {
     state = getCurrentState(stations[currentSelectedRadio]);
