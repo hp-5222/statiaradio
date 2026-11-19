@@ -4,14 +4,14 @@ const songNameLabel = document.getElementById('songName');
 const artistNameLabel = document.getElementById('artistName');
 const logo = document.getElementById('logo').content.cloneNode(true).querySelector('img');
 const stationsConfig = {
-  S1OT: { logo: "media/S1OT_holiday_logo.png" },
-  S1FW: { logo: "media/S1FW_logo.png" },
-  S1CF: { logo: "media/S1FW_logo.png" }
+  S1OT: { logo: "S1OT_holiday_logo.png" },
+  S1FW: { logo: "S1FW_logo.png" },
+  S1CF: { logo: "S1FW_logo.png" }
 };
 document.getElementById('nowPlaying').after(logo);
 
 function getStationFromURL() {
-  const stationId = window.location.pathname.replace(/^\/|\/$/g, "");
+  const stationId = window.location.pathname.replace("/statiaradio/", "").replace(/\/$/, "");
   return stations[stationId] && stationsConfig[stationId] ? stationId : "S1OT";
 }
 
@@ -22,7 +22,7 @@ let initialTimestamp = state.timestamp; // How far we are into the song the last
 let playerReady = false;
 songNameLabel.textContent = state.song.title
 artistNameLabel.textContent = state.song.artist
-logo.src = stationsConfig[currentSelectedRadio].logo;
+logo.src = `${"/statiaradio/"}media/${stationsConfig[currentSelectedRadio].logo}`;
 
 function switchStation(stationId, updateURL = true) {
   if (!stations[stationId] || !stationsConfig[stationId]) {return;}
@@ -34,14 +34,14 @@ function switchStation(stationId, updateURL = true) {
 
   songNameLabel.textContent = state.song.title;
   artistNameLabel.textContent = state.song.artist;
-  logo.src = stationsConfig[stationId].logo;
+  logo.src = `${"/statiaradio/"}media/${stationsConfig[stationId].logo}`;
 
   if (playerReady) {
     player.loadVideoById(state.song.link);
   }
 
   if (updateURL && window.location.pathname !== `/${stationId}`) {
-    history.pushState(null, "", `/${stationId}`);
+    history.pushState(null, "", `${"/statiaradio/"}${stationId}`);
   }
 }
 
