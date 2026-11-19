@@ -58,6 +58,14 @@ Object.keys(stationsConfig).forEach(stationId => {
 
 window.addEventListener('popstate', () => {switchStation(getStationFromURL(), false);});
 
+const input = document.getElementById("customStationInput");
+input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      const intendedStation = input.value.trim().toUpperCase();
+      switchStation(intendedStation);
+    }
+}
+
 function getExpectedTimestamp() {
   return initialTimestamp + (Date.now() - lastSyncedAt);
 }
