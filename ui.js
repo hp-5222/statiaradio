@@ -64,7 +64,7 @@ input.addEventListener('keydown', (event) => {
       const intendedStation = input.value.trim().toUpperCase();
       switchStation(intendedStation);
     }
-}
+});
 
 function getExpectedTimestamp() {
   return initialTimestamp + (Date.now() - lastSyncedAt);
