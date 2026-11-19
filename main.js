@@ -182,6 +182,27 @@ const stations = {
       { title: "Walk Away", artist: "Kelly Clarkson", length: 190000, link: "3553TFmkb4A", weight: 6 }, // RK
     ]  
   },
+  S1AZ: {
+    frequency: 99.7,
+    reach: 2000,
+    songs: [
+      { title: "Misery Business", artist: "Paramore", length: 211000, link: "1VPotzhpAGE", weight: 5 },
+      { title: "The Only Exception", artist: "Paramore", length: 267000, link: "J7J_IWUhls", weight: 6 },
+      { title: "Brick By Boring Brick", artist: "Paramore", length: 262000, link: "A63VwWz1ij0", weight: 4 },
+      { title: "All I Wanted", artist: "Paramore", length: 225000, link: "W7nmB20qJv4", weight: 5 },
+      { title: "Still Into You", artist: "Paramore", length: 220000, link: "OblL026SvD4", weight: 5 },
+      { title: "Ain't It Fun", artist: "Paramore", length: 227000, link: "EFEmTsfFL5A", weight: 5 },
+      { title: "Hard Times", artist: "Paramore", length: 198000, link: "AEB6ibtdPZc", weight: 5 },
+      { title: "Pool", artist: "Paramore", length: 229000, link: "3m8ElO9Y50Y", weight: 4 },
+      { title: "This Is Why", artist: "Paramore", length: 237000, link: "xIYJ7VaSxYY", weight: 5 },
+      { title: "good 4 u", artist: "Olivia Rodrigo", length: 178000, link: "aeDdS9aIpck", weight: 5 },
+      { title: "brutal", artist: "Olivia Rodrigo", length: 144000, link: "hM2U8cb8lhI", weight: 6 },
+      { title: "ballad of a homeschooled girl", artist: "Olivia Rodrigo", length: 203000, link: "obSpLSnJ-wI", weight: 4 },
+      { title: "love is embarrassing", artist: "Olivia Rodrigo", length: 154000, link: "AXi213cWgYM", weight: 4 },
+      { title: "State Of Grace", artist: "Taylor Swift", length: 299000, link: "mrC5tRkxrY", weight: 5 },
+      { title: "Red", artist: "Taylor Swift", length: 220000, link: "R_rUYuFtNO4", weight: 4 },
+    ]  
+  },
 };
 
 const mb32=s=>{let a=0;for(let c of s)a=Math.imul(31,a)+c.charCodeAt(0)|0;return t=>(a=a+1831565813|0,t=Math.imul(a^a>>>15,1|a),t=t+Math.imul(t^t>>>7,61|t)^t,(t^t>>>14)>>>0)/2**32};
