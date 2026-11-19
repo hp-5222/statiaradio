@@ -3,7 +3,7 @@ let mostRecentInput = document.getElementById("firstInput");
 async function getLength(videoIds) {
   videoIds = videoIds.map(id => {const match = id.match(/(?:youtube\.com\/(?:watch\?.*?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})|^([a-zA-Z0-9_-]{11})$/) 
   return match?.[1] || match?.[2] || id;});
-  const endpoint = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${videoIds.join("")}&key=${"AIzaSyCOC9QiOneczitWPxOzSbZIRcefi6hfGjY"}`;
+  const endpoint = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${videoIds.join(",")}&key=${"AIzaSyCOC9QiOneczitWPxOzSbZIRcefi6hfGjY"}`;
   const response = await fetch(endpoint);
   const data = await response.json();
   if (!response.ok) { throw new Error(data.error?.message || "YouTube API error"); }
