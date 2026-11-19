@@ -39,9 +39,7 @@ done.addEventListener('click', async () => {
   try {
     const videos = [];
     for (const batch of batches) { const results = await getLength(batch); videos.push(...results); }
-    const formatted = videos.map(video => {
-      const title = (video.title, video.artist);
-      return `  { title: ${JSON.stringify(title)}, artist: ${JSON.stringify(video.artist)}, length: ${video.length}, link: ${JSON.stringify(video.link)}, weight: 1 },`;}).join("\n");
+    const formatted = videos.map(video => { const title = cleanTitle(video.title, video.artist); return `  { title: ${JSON.stringify(title)}, artist: ${JSON.stringify(video.artist)}, length: ${video.length}, link: ${JSON.stringify(video.link)}, weight: 1 },`;}).join("\n");
     console.log("----- GENERATED -----");
     console.log(formatted);
     console.log("----- REVIEW ORIGINALS -----");
