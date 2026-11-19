@@ -18,7 +18,7 @@ function getStationFromURL() {
 }
 
 const stationFromURL = getStationFromURL();
-if (new URLSearchParams(window.location.search).has("station")) { history.replaceState(null, "", `${BASE_PATH}${stationFromURL}`); }
+if (new URLSearchParams(window.location.search).has("station")) { history.replaceState(null, "", `${"/statiaradio/"}${stationFromURL}`); }
 
 let currentSelectedRadio = getStationFromURL();
 let state = getCurrentState(stations[currentSelectedRadio]); // All the information about the song, including how far into it
