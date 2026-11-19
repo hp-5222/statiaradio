@@ -231,7 +231,7 @@ function selectWeightedSong(songs, random) {
 
 function calculateWeight(song, simulatedTime, blockPlaylist) {
     const baseWeight = song.weight;
-    const repeatCooldown = 3600000; // 1 hour
+    const repeatCooldown = 7200000; // 1 hour
     const previousPlays = blockPlaylist.filter(played => played.title === song.title);
     const lastPlayed = previousPlays.length > 0 ? previousPlays[previousPlays.length - 1] : null;
 
