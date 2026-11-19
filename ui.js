@@ -6,7 +6,9 @@ const logo = document.getElementById('logo').content.cloneNode(true).querySelect
 const stationsConfig = {
   S1OT: { logo: "S1OT_holiday_logo.png" },
   S1FW: { logo: "S1FW_logo.png" },
-  S1CF: { logo: "S1FW_logo.png" }
+  S1CF: { logo: "S1FW_logo.png" },
+  S1AZ: { logo: "S1AZ_logo.png" },
+  S1JR: { logo: "S1FW_logo.png" },
 };
 document.getElementById('nowPlaying').after(logo);
 
