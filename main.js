@@ -331,7 +331,7 @@ function calculateWeight(song, simulatedTime, blockPlaylist) {
         const timeSinceLastPlay = simulatedTime - lastPlayed.startTime;
 
         if (timeSinceLastPlay < repeatCooldown) {
-            recencyMultiplier = Math.max(0.05,timeSinceLastPlay / repeatCooldown);
+            recencyMultiplier = Math.max(0.02,timeSinceLastPlay / repeatCooldown);
         }
     }
   
