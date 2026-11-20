@@ -172,7 +172,7 @@ const stations = {
       { title: "Girlfriend", artist: "Avril Lavigne", length: 218000, link: "g0TiuFwX0r8", weight: 6 }, // RK
       { title: "When You're Gone", artist: "Avril Lavigne", length: 241000, link: "9ep1pjnt2nI", weight: 6 }, // RK
       { title: "Head Over Feet", artist: "Alanis Morissette", length: 266000, link: "IqVnCj8kuyA", weight: 7 }, // RK
-      { title: "You Learn", artist: "Alanis Morissette", length: 240000, link: "vZPJYEAf4Mg", weight: 6 }, // RK 
+      { title: "You Learn", artist: "Alanis Morissette", length: 240000, link: "vZPJYEAf4Mg", weight: 6 }, // RK
       { title: "Ironic", artist: "Alanis Morissette", length: 226000, link: "AakBK5leleE", weight: 6 }, // RK
       { title: "Hand in My Pocket", artist: "Alanis Morissette", length: 222000, link: "jXd6_D6SBwk", weight: 5 }, // RK
       { title: "You Oughta Know", artist: "Alanis Morissette", length: 250000, link: "iWFE1pekWyI", weight: 5 }, // RK
@@ -180,6 +180,52 @@ const stations = {
       { title: "Behind These Hazel Eyes", artist: "Kelly Clarkson", length: 199000, link: "J2wYJERAN3Q", weight: 7 }, // RK
       { title: "Since U Been Gone", artist: "Kelly Clarkson", length: 189000, link: "p0BiGek2bKA", weight: 7 }, // RK
       { title: "Walk Away", artist: "Kelly Clarkson", length: 190000, link: "3553TFmkb4A", weight: 6 }, // RK
+      { title: "Self Esteem", artist: "The Offspring", length: 258000, link: "7ifeDVAE_Zg", weight: 6 }, // RK
+      { title: "Gone Away", artist: "The Offspring", length: 269000, link: "-I-j-ehNUlo", weight: 6 },
+      { title: "The Kids Aren't Alright", artist: "The Offspring", length: 181000, link: "-uQi0vJK9lk", weight: 6 },
+      { title: "You're Gonna Go Far, Kid", artist: "The Offspring", length: 178000, link: "weqK155M_4o", weight: 6 },
+      { title: "That's What You Get", artist: "Paramore", length: 221000, link: "aVbdEnIolPo", weight: 7 },
+      { title: "Decode", artist: "Paramore", length: 262000, link: "U0ttaF2fRPc", weight: 6 },
+      { title: "Dare You to Move", artist: "Switchfoot", length: 250000, link: "9VcI-t8rb8c", weight: 5 },
+      { title: "Meant to Live", artist: "Switchfoot", length: 202000, link: "brj4BGkbOUw", weight: 7 },
+      { title: "Thnks fr th Mmrs", artist: "Fall Out Boy", length: 204000, link: "j7aQDJLjiD4", weight: 8 },
+      { title: "This Ain't A Scene, It's An Arms Race", artist: "Fall Out Boy", length: 213000, link: "Qw1Vg0kesgg", weight: 6 },
+      { title: "Don't You Know Who I Think I Am?", artist: "Fall Out Boy", length: 172000, link: "9tIy6VveGMg", weight: 5 },
+      { title: "Dance, Dance", artist: "Fall Out Boy", length: 181000, link: "P43XYXqJJlU", weight: 7 },
+      { title: "Sugar, We're Goin Down", artist: "Fall Out Boy", length: 230000, link: "_2eTNxPxXRc", weight: 6 },
+      { title: "Centuries", artist: "Fall Out Boy", length: 229000, link: "dfk6i41GCNo", weight: 7 },
+      { title: "Monster", artist: "Skillet", length: 179000, link: "h6863vjJ9Ds", weight: 6 },
+      { title: "Hero", artist: "Skillet", length: 187000, link: "EDNZ2zubuKg", weight: 7 },
+      { title: "Feel Invincible", artist: "Skillet", length: 230000, link: "0m7puo2uBzA", weight: 8 },
+      { title: "Smells Like Teen Spirit", artist: "Nirvana", length: 302000, link: "JirXTmnItd4", weight: 7 },
+      { title: "Come As You Are", artist: "Nirvana", length: 220000, link: "W2QeQ9ZufAk", weight: 6 },
+      { title: "Just A Girl", artist: "No Doubt", length: 210000, link: "liSwJDJtmPw", weight: 6 },
+      { title: "Flagpole Sitta", artist: "Harvey Danger", length: 218000, link: "sVt1Dy_LblQ", weight: 6 },
+      { title: "Zombie", artist: "The Cranberries", length: 308000, link: "lSDfCdycdvk", weight: 7 },
+      { title: "Linger", artist: "The Cranberries", length: 275000, link: "PXDlU0YDQ6U", weight: 6 },
+      { title: "Dreams", artist: "The Cranberries", length: 272000, link: "SezuFrHm8f0", weight: 7 },
+      { title: "Torn", artist: "Natalie Imbruglia", length: 245000, link: "rIGAt5yvfmw", weight: 6 },
+      { title: "Eagleheart", artist: "Stratovarius", length: 231000, link: "UwaMFFsaCeI", weight: 5 },
+      { title: "Through The Fire And Flames", artist: "DragonForce", length: 440000, link: "DZyYapMZSec", weight: 4 },
+      { title: "Holiday", artist: "Green Day", length: 234000, link: "KIxU5caGD6c", weight: 7 },
+      { title: "Boulevard of Broken Dreams", artist: "Green Day", length: 262000, link: "FPrHuDvXEBw", weight: 8 },
+      { title: "Basket Case", artist: "Green Day", length: 182000, link: "gS86jipcKzw", weight: 5 },
+      { title: "When I Come Around", artist: "Green Day", length: 178000, link: "iKBJlxnlIXE", weight: 6 },
+      { title: "Welcome to the Black Parade", artist: "My Chemical Romance", length: 312000, link: "v_uncMEJkBc", weight: 4 },
+      { title: "aromatherapy", artist: "CHILIØ", length: 179000, link: "glq2R_Kfbo0", weight: 6 },
+      { title: "In the End", artist: "Linkin Park", length: 217000, link: "BLZWkjBXfN8", weight: 7 },
+      { title: "What I've Done", artist: "Linkin Park", length: 206000, link: "qu0k38VMaV4", weight: 6 },
+      { title: "Breaking the Habit", artist: "Linkin Park", length: 197000, link: "_e7bqZGPyFI", weight: 6 },
+      { title: "Faint", artist: "Linkin Park", length: 163000, link: "vwxDtaDBP_I", weight: 7 },
+      { title: "Somewhere I Belong", artist: "Linkin Park", length: 214000, link: "-YQ8IbVIwPM", weight: 6 },
+      { title: "Numb", artist: "Linkin Park", length: 188000, link: "Q7cQU86CDB0", weight: 6 },
+      { title: "Cannibal", artist: "Silversun Pickups", length: 225000, link: "VRysBHiJYbw", weight: 6 },
+      { title: "Lazy Eye", artist: "Silversun Pickups", length: 355000, link: "_farsI18j3I", weight: 5 },
+      { title: "Substitution", artist: "Silversun Pickups", length: 282000, link: "6xJI2l6wJcI", weight: 7 },
+      { title: "The Royal We", artist: "Silversun Pickups", length: 288000, link: "EFzfayLMWHo", weight: 6 },
+      { title: "Panic Switch", artist: "Silversun Pickups", length: 344000, link: "n51TbR0y2YM", weight: 5 },
+      { title: "Underdog", artist: "Kasabian", length: 278000, link: "iNgPJRDWT5g", weight: 7 },
+      { title: "Go With The Flow", artist: "Queens Of The Stone Age", length: 182000, link: "ZkRtdXSSuC0", weight: 7 },
     ]  
   },
   S1AZ: {
